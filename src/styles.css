@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+.brand{
+  background-color: #090;
+}
+
+body{
+  padding: 30px;
+}
+
+.error {
+  color: #FF0000;
+}
+
+.input-error{
+  border-color: #FF0000;
+}

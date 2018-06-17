@@ -1,0 +1,39 @@
+  <div class="row">
+    <div class="col-md-4">
+      <h5>Cliente</h5>
+      <input [(ngModel)]="cliente" type="text" class="form-control"  readonly >  
+    </div>
+    <div class="col-md-3">
+      <h5>Comprobante</h5>
+      <input [(ngModel)]="comprobante" type="text"  class="form-control" readonly >  
+    </div>
+    <div class="col-md-3 form-group">
+      <button style="margin-top:30px" class="btn btn-default"><a href="../orders/" >Regresar</a></button>
+    </div>
+
+</div>
+<app-group-box>
+  <div class="body">
+    <table class="data-table" border="1">
+      <thead>
+        <tr>
+          <th>N°</th>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let producto of productoList; let par = even; let inpar = odd; let indice = index" [ngClass]="{'row-par': par}">
+          <td>{{indice + 1}}</td>
+          <td>{{producto.nombre}}</td>
+          <td>{{producto.precio}}</td>
+          <td>{{producto.cantidad}}</td>
+          <td>{{producto.total}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</app-group-box>
+

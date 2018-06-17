@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3"></div>
+     <div class="col-sm-7 col-md-5">
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="form-signin" >
+            <h1 class="text-center">Ingreso del Sistema</h1>
+            <br/>
+            <input type="text" class="form-control" name="user" ngModel placeholder="Usuario" required autofocus>
+            <input type="password" class="form-control" name="password" ngModel placeholder="Contraseña" required>
+            <br/>
+
+            <input type="submit" class="btn btn-lg btn-primary btn-block" [disabled]="f.invalid"
+            value="Ingresar" />
+        </form>        
+    </div>
+  </div>
+</div>

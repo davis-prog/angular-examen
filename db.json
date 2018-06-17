@@ -1,0 +1,131 @@
+{
+  "people": [
+    {
+      "name": "bbbbbb",
+      "lastName": "bbbb bbbb",
+      "age": 18,
+      "state": "Inactivo",
+      "profile": "aaa a aa a a a a a a a a a a a a a a a a a  a",
+      "id": 4
+    },
+    {
+      "name": "vvvvv",
+      "lastName": "vv vvvv",
+      "age": 18,
+      "state": "Activo",
+      "profile": "aaa a aa a a a a a a a a a a a a a a a a a  a",
+      "id": 5
+    },
+    {
+      "name": "claudio",
+      "lastName": "pizarro",
+      "age": "39",
+      "state": "activo",
+      "profile": "jugador",
+      "id": 6
+    }
+  ],
+  "usuarios": [
+    {
+      "user": "EVELASQUEZ",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "user": "David",
+      "password": "123",
+      "id": 2
+    }
+  ],
+  "comprobante": [
+    {
+      "tipo": "BOL",
+      "serie": "001",
+      "numero": 1,
+      "cliente": "BANCO CONTINENTAL",
+      "importe": 4000,
+      "id": 1
+    },
+    {
+      "tipo": "FAC",
+      "serie": "001",
+      "numero": 10,
+      "cliente": "BANCO BCP",
+      "importe": 1200,
+      "id": 2
+    },
+    {
+      "tipo": "FAC",
+      "serie": "001",
+      "numero": 2,
+      "cliente": "BANCO SANTANDER",
+      "importe": 3500,
+      "id": 3
+    }
+  ],
+  "producto": [
+    {
+      "id": 1,
+      "nombre": "CUADERNO LORO",
+      "precio": 4,
+      "cantidad": 2,
+      "total": 8
+    },
+    {
+      "id": 2,
+      "nombre": "LAPICERO PUNTA FINA",
+      "precio": 1,
+      "cantidad": 1,
+      "total": 1
+    },
+    {
+      "id": 3,
+      "nombre": "PLUMON ARTESCO",
+      "precio": 7,
+      "cantidad": 10,
+      "total": 70
+    }
+  ],
+  "comprobante_producto": [
+    {
+      "id_comprobante": 1,
+      "id_producto": 1,
+      "id": 1
+    },
+    {
+      "id_comprobante": 1,
+      "id_producto": 2,
+      "id": 2
+    },
+    {
+      "id_comprobante": 1,
+      "id_producto": 3,
+      "id": 3
+    }
+  ],
+  "tipo_comprobante": [
+    {
+      "descripcion": "BOLETA",
+      "tipo": "BOL"
+    },
+    {
+      "descripcion": "FACTURA",
+      "tipo": "FAC"
+    },
+    {
+      "descripcion": "RECIBO",
+      "tipo": "REC"
+    }
+  ],
+  "serie": [
+    {
+      "serie": "001"
+    },
+    {
+      "serie": "002"
+    },
+    {
+      "serie": "003"
+    }
+  ]
+}

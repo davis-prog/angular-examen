@@ -1,0 +1,84 @@
+
+
+  <div class="row">
+    <div class="col-md-3">
+      <label>Cliente</label>
+      <input  #cliente type="text" class="form-control">
+    </div>
+    <div class="col-md-2">
+      <label>Tipo comprobante</label>
+      <select class="form-control" #tipo>
+        <option *ngFor="let tc of tipoComprobanteList" [value]="tc.tipo">{{tc.descripcion}}</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <label>Serie comprobante</label>
+      <select class="form-control" #serie>
+        <option *ngFor="let serie of serieList" [value]="serie.serie">{{serie.serie}}</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <label>Nro comprobante</label>
+      <input #numero type="text" class="form-control">
+    </div>
+  </div>
+  <br>
+  <div class="row" style="margin-left:4px">
+    <h3>Items</h3>
+  </div>
+  <br>
+
+<form #formProducto="ngForm" (ngSubmit)="onSubmit(formProducto)">
+  <div class="row">
+    <div class="col-md-3">
+      <label>Producto</label>
+      <input ngModel name="nombre" type="text" class="form-control" required>
+    </div>
+    <div class="col-md-2">
+      <label>Precio</label>
+      <input ngModel name="precio" type="text" class="form-control" required>
+    </div>
+    <div class="col-md-2">
+      <label>Cantidad</label>
+      <input ngModel name="cantidad" type="text" class="form-control" required>
+    </div>
+    <div class="col-md-2">
+      <button style="margin-top:30px" class="btn btn-primary" [disabled]="formProducto.invalid">Agregar</button>
+    </div>
+  </div>
+</form>
+<br>
+<app-group-box>
+  <div class="body">
+    <div class="row" style="margin-left:3px">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Nro.</th>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Total</th>
+            <th>Accion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let producto of productoList; let par = even; let inpar = odd; let indice = index" [ngClass]="{'row-par': par}">
+            <td>{{indice + 1}}</td>
+            <td>{{producto.nombre}}</td>
+            <td>{{producto.precio}}</td>
+            <td>{{producto.cantidad}}</td>
+            <td>{{producto.total}}</td>
+            <td>
+              <button class="btn btn-danger" (click)="deleteProducto(producto)">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</app-group-box>
+
+<div class="row" style="margin-left:4px">
+  <button style="margin-top:30px" class="btn btn-primary" (click)="btnSave()" >Guardar</button>
+</div>
